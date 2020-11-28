@@ -1,0 +1,87 @@
+/* ============================================
+     Hero Section Css
+   ============================================= 
+*/
+.hero {
+    // background-color: $primary-bg-color;
+    background-image: url("../../assets/backgrounds/Background1.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: auto;
+    padding: 200px 0 100px 0;
+    height: 950px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 580px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    grid-template-rows: 1fr 1fr 30%;
+    justify-content: start;
+    text-align: center;
+
+    .headline {
+        color: $secondary-font-color;
+        font-weight: bold;
+        font-size: 4.5rem;
+        line-height: 100%;
+    }
+    .sub-headline {
+        color: $secondary-font-color;
+        font-size: $headline-font-size;
+        line-height: 120%;
+        text-transform: capitalize;
+        width:350px;
+        justify-self: center;
+    }
+}
+
+.text-block {
+    justify-self: center;
+    width: 400px;
+    margin-top: 30px;
+    text-align: left;
+}
+.text-header {
+    font-size: $headline-font-size;
+    //font-style: medium;
+    font-family: "Helvetica Neue";
+    text-align: center;
+}
+
+.devices {
+    position: absolute;
+    top: 100px;
+    left: 520px;
+    
+
+    .device-container {
+        position: relative;
+
+        #iphone {
+            position: absolute;
+            width: 480px;
+            transform: rotate(35.85deg);
+            top: 40px;
+            left: 200px;
+        }
+    
+        #ipad {
+            position: absolute;
+            right:-1120px;
+            top:480px;
+            transform: rotate(-1.5deg);
+            width: 570px;
+        }
+    
+        #laptop{
+            position: absolute;
+            top: 300px;
+            width: 900px;
+            left:0;
+        }
+    }
+}
