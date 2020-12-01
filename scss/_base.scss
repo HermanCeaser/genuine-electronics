@@ -2,8 +2,8 @@ $default-font-color: #000;
 $secondary-font-color: #fff;
 $primary-bg-color: #01366c;
 $secondary-bg-color: #dc9f07;
-$headline-font-size: 1.725rem;
-$text-font-size: 1.25rem;
+$headline-font-size: 1.725rem; //30px
+$text-font-size: 1.25rem; //20px;
 
 @font-face {
   font-family: "Helvetica Neue LT";
@@ -17,6 +17,16 @@ $text-font-size: 1.25rem;
   src: url("/assets/fonts/HelveticaNeue\ Medium.ttf") format("truetype");
   font-weight: 500px;
   font-style: medium;
+}
+// Mixin Styles and variables
+$break-tablet: 768px;
+$break-mobile-medium: 375px;
+$break-mobile-small: 320px;
+
+@mixin responsive($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
 }
 
 /* 
@@ -109,6 +119,7 @@ body {
   background-color: white;
   min-height: 100%;
   line-height: 20px;
+  overflow-x: hidden !important;
 }
 
 .container {

@@ -3,85 +3,112 @@
    ============================================= 
 */
 .hero {
-    // background-color: $primary-bg-color;
-    background-image: url("../../assets/backgrounds/Background1.svg");
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
-    background-size: auto;
-    padding: 200px 0 100px 0;
-    height: 950px;
-    position: relative;
-    overflow: hidden;
+  // background-color: $primary-bg-color;
+  background-image: url("../../assets/backgrounds/Background1.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: auto;
+  padding: 200px 0 100px 0;
+  height: 950px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include responsive(760px) {
+    background-position: 70% 0%;
+    max-width: 800px;
+  }
+
+  @include responsive($break-mobile-medium) {
+    background-position: 80% 0%;
+    max-width: 620px;
+  }
 }
 
 .hero-text {
-    width: 580px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
-    grid-template-rows: 1fr 1fr 30%;
-    justify-content: start;
-    text-align: center;
+  width: 580px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  grid-template-rows: 1fr 1fr 30%;
+  justify-content: start;
+  text-align: center;
+  padding: 20px;
 
-    .headline {
-        color: $secondary-font-color;
-        font-weight: bold;
-        font-size: 4.5rem;
-        line-height: 100%;
+  @include responsive($break-mobile-medium) {
+    width: 350px;
+  }
+
+  .headline {
+    color: $secondary-font-color;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 100%;
+
+    @include responsive($break-mobile-medium) {
+      font-size: 3.5rem;
     }
-    .sub-headline {
-        color: $secondary-font-color;
-        font-size: $headline-font-size;
-        line-height: 120%;
-        text-transform: capitalize;
-        width:350px;
-        justify-self: center;
+  }
+  .sub-headline {
+    color: $secondary-font-color;
+    font-size: $headline-font-size;
+    line-height: 120%;
+    text-transform: capitalize;
+    width: 350px;
+    justify-self: center;
+
+    @include responsive($break-mobile-medium) {
+      font-size: 1.5rem;
     }
+  }
 }
 
 .text-block {
-    justify-self: center;
-    width: 400px;
-    margin-top: 30px;
-    text-align: left;
+  justify-self: center;
+  width: 400px;
+  margin-top: 30px;
+  text-align: left;
 }
 .text-header {
-    font-size: $headline-font-size;
-    //font-style: medium;
-    font-family: "Helvetica Neue";
-    text-align: center;
+  font-size: $headline-font-size;
+  //font-style: medium;
+  font-family: "Helvetica Neue";
+  text-align: center;
 }
 
 .devices {
-    position: absolute;
-    top: 100px;
-    left: 520px;
-    
+  position: absolute;
+  top: 100px;
+  left: 520px;
 
-    .device-container {
-        position: relative;
+  @include responsive($break-mobile-medium) {
+    left: 0px;
+  }
 
-        #iphone {
-            position: absolute;
-            width: 480px;
-            transform: rotate(35.85deg);
-            top: 40px;
-            left: 200px;
-        }
-    
-        #ipad {
-            position: absolute;
-            right:-1120px;
-            top:480px;
-            transform: rotate(-1.5deg);
-            width: 570px;
-        }
-    
-        #laptop{
-            position: absolute;
-            top: 300px;
-            width: 900px;
-            left:0;
-        }
+  .device-container {
+    position: relative;
+
+    #iphone {
+      position: absolute;
+      width: 480px;
+      transform: rotate(35.85deg);
+      top: 40px;
+      left: 200px;
     }
+
+    #ipad {
+      position: absolute;
+      right: -1120px;
+      top: 480px;
+      transform: rotate(-1.5deg);
+      width: 570px;
+    }
+
+    #laptop {
+      position: absolute;
+      top: 300px;
+      width: 900px;
+      left: 0;
+    }
+  }
 }
