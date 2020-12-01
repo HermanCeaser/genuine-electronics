@@ -38,6 +38,10 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 200px;
   color: #fcfcfc;
+
+  @include responsive(600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-form {

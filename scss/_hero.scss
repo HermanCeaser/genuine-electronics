@@ -35,8 +35,13 @@
   text-align: center;
   padding: 20px;
 
+  @include responsive(760px) {
+    width: 450px;
+    padding: 15px;
+  }
   @include responsive($break-mobile-medium) {
     width: 350px;
+    padding: 10px;
   }
 
   .headline {
@@ -45,6 +50,9 @@
     font-size: 4.5rem;
     line-height: 100%;
 
+    @include responsive(760px) {
+      font-size: 4rem;
+    }
     @include responsive($break-mobile-medium) {
       font-size: 3.5rem;
     }
@@ -57,6 +65,10 @@
     width: 350px;
     justify-self: center;
 
+    @include responsive(760px) {
+      font-size: 2rem;
+    }
+
     @include responsive($break-mobile-medium) {
       font-size: 1.5rem;
     }
@@ -68,12 +80,23 @@
   width: 400px;
   margin-top: 30px;
   text-align: left;
+
+  @include responsive($break-mobile-medium) {
+    display: block;
+    width: 350px;
+    margin-top: 100px;
+  }
 }
+
 .text-header {
   font-size: $headline-font-size;
   //font-style: medium;
   font-family: "Helvetica Neue";
   text-align: center;
+
+  @include responsive($break-mobile-medium) {
+    font-size: 1.5rem;
+  }
 }
 
 .devices {
@@ -82,7 +105,9 @@
   left: 520px;
 
   @include responsive($break-mobile-medium) {
-    left: 0px;
+    left: 100px;
+    top: 400px;
+    transform: scale(0.5);
   }
 
   .device-container {
@@ -94,6 +119,10 @@
       transform: rotate(35.85deg);
       top: 40px;
       left: 200px;
+
+      @include responsive($break-mobile-medium) {
+        display: none;
+      }
     }
 
     #ipad {

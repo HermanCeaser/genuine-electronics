@@ -31,3 +31,38 @@ const startSlide = () => {
 // })
 
 //startSlide();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const product = document.querySelectorAll(".product-set");
+  const btnNext = document.querySelector(".arrowright");
+  const btnPrev = document.querySelector(".arrowright");
+  let index = 0;
+
+  // for (let i = 1; i < product.length; i++) {
+  //   product[i].style.display = "none";
+  // }
+
+  btnPrev.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      console.log(product[index]);
+      product[index + 1].style.display = "none";
+      product[index].style.display = "block";
+    } else {
+      return;
+    }
+    console.log(index);
+  });
+
+  btnNext.addEventListener("click", () => {
+    if (index < product.length) {
+      index++;
+      console.log(product[index]);
+      product[index - 1].style.display = "none";
+      product[index].style.display = "block";
+    } else {
+      return;
+    }
+    console.log(index);
+  });
+});
