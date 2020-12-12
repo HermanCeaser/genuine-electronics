@@ -24,7 +24,7 @@ $break-mobile-medium: 375px;
 $break-mobile-small: 320px;
 
 @mixin responsive($size) {
-  @media screen and (max-width: $size) {
+  @media all and (max-width: $size) {
     @content;
   }
 }

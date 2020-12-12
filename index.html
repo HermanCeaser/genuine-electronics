@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>Genuine Electronics</title>
     <link rel="stylesheet" href="./dist/css/style.min.css" />
+    <link rel="stylesheet" href="./dist/css/swipe-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./dist/css/swipe.style.css" /> -->
   </head>
   <body>
     <div class="hero">
@@ -78,180 +80,130 @@
       <div class="container">
         <h4 class="text-header">Product Categories</h4>
         <div class="product-set">
-          <div class="product-text">
-            <div class="arrowleft">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M32 2L3 31L32 62"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3>LAPTOPS</h3>
-            <div class="divider"></div>
-            <div class="text">
-              We do sell laptops both brand new and used from UK and we do have
-              a range of brands that you can pick from
-            </div>
-            <div class="arrowright">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 62L31 33L2 2"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
           <div>
             <div class="container">
               <div class="laptopset">
-                <div id="product1">
-                  <img src="./assets/images/dell inspiron 15 5593.png" alt="" />
-                </div>
-                <div id="product2">
-                  <img src="./assets/images/macbook air.webp" alt="" />
-                </div>
-                <div id="product3">
-                  <img src="./assets/images/hp notebook.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-set" style="display: none">
-          <div class="product-text">
-            <div class="arrowleft">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M32 2L3 31L32 62"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3>PHONES</h3>
-            <div class="divider"></div>
-            <div class="text">
-              We do sell laptops both brand new and used from UK and we do have
-              a range of brands that you can pick from
-            </div>
-            <div class="arrowright">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 62L31 33L2 2"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-          <div>
-            <div class="container">
-              <div class="laptopset">
-                <div id="product1">
-                  <img src="./assets/images/itel s15.png" alt="" />
-                </div>
-                <div id="product2">
-                  <img src="./assets/images/huawe p20.png" alt="" />
-                </div>
-                <div id="product3">
-                  <img src="./assets/images/Techno-Spark-5-2.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-set" style="display: none">
-          <div class="product-text">
-            <div class="arrowleft">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M32 2L3 31L32 62"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-
-            <h3>TABLETS</h3>
-            <div class="divider"></div>
-            <div class="text">
-              We do sell laptops both brand new and used from UK and we do have
-              a range of brands that you can pick from
-            </div>
-            <div class="arrowright">
-              <svg
-                width="34"
-                height="64"
-                viewBox="0 0 34 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 62L31 33L2 2"
-                  stroke="#DC9F07"
-                  stroke-opacity="0.8"
-                  stroke-width="5"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </div>
-          <div>
-            <div class="container">
-              <div class="laptopset">
-                <div id="product1">
-                  <img src="./assets/images/galaxy tab.webp" alt="" />
-                </div>
-                <div id="product2">
-                  <img src="./assets/images/tablet winnovo.png" alt="" />
-                </div>
-                <div id="product3">
-                  <img src="./assets/images/galaxyviewtab.webp" alt="" />
+                <!-- Swiper -->
+                <!-- Swiper -->
+                <div class="swiper-container swiper-container-products">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-outer">
+                      <div class="product-text">
+                        <h3>LAPTOPS</h3>
+                        <div class="divider"></div>
+                        <div class="text">
+                          We do sell laptops both brand new and used from UK and
+                          we do have a range of brands that you can pick from
+                        </div>
+                      </div>
+                      <div class="swiper-container swiper-container-laptops">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/dell inspiron 15 5593.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/macbook air.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./assets/images/hp notebook.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div
+                          class="swiper-pagination swiper-pagination-laptops"
+                        ></div>
+                        <!-- Add Arrows -->
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-outer">
+                      <div class="product-text">
+                        <h3>PHONES</h3>
+                        <div class="divider"></div>
+                        <div class="text">
+                          We do sell Mobile Phones both brand new and used from
+                          UK and we do have a range of brands that you can pick
+                          from
+                        </div>
+                      </div>
+                      <div class="swiper-container swiper-container-phones">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/Samsung_Galaxy_S10.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./assets/images/itel s15.png" alt="" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/Techno-Spark-5-2.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./assets/images/huawe p20.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div
+                          class="swiper-pagination swiper-pagination-phones"
+                        ></div>
+                        <!-- Add Arrows -->
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-outer">
+                      <div class="product-text">
+                        <h3>TABLETS</h3>
+                        <div class="divider"></div>
+                        <div class="text">
+                          We do sell Tablets both brand new and used from UK and
+                          we do have a range of brands that you can pick from
+                        </div>
+                      </div>
+                      <div class="swiper-container swiper-container-tablets">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/tablet winnovo.png"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="./assets/images/tablette-tactile-10.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./assets/images/galaxy tab.webp" alt="" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./assets/images/ipad mockup.png" alt="" />
+                          </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div
+                          class="swiper-pagination swiper-pagination-tablets"
+                        ></div>
+                        <!-- Add Arrows -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add Button Navigation -->
+                  <div
+                    class="swiper-button-next swiper-button-next-products"
+                  ></div>
+                  <div
+                    class="swiper-button-prev swiper-button-prev-products"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -664,6 +616,10 @@
         />
       </svg>
     </button>
+    <script src="./dist/js/swipe-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./dist/js/swipe.js"></script>
     <script>
       //Get the button
       var mybutton = document.getElementById("scrollToTop");
