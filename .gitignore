@@ -2,3 +2,5 @@ debug
 debug.log*
 *.log
 .vscode
+.scss
+index2.html
