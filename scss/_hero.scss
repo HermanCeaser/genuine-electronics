@@ -1,0 +1,237 @@
+/* ============================================
+     Hero Section Css
+   ============================================= 
+*/
+.hero {
+  // background-color: $primary-bg-color;
+  background-image: url("../../assets/backgrounds/Background1.svg");
+  background-repeat: no-repeat;
+  background-position: 60% 0%;
+  background-size: auto;
+  padding: 100px 0 100px 0;
+  height: 950px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include responsive($break-tablet) {
+    padding: 120px 0 100px 0;
+    background-position: 70% -30%;
+  }
+}
+
+.hero-text {
+  width: 350px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+
+  @include responsive($break-mobile) {
+    width: 450px;
+  }
+
+  @include responsive($break-tablet) {
+    width: 500px;
+    transform: scale(0.8);
+  }
+  .headline {
+    color: $secondary-font-color;
+    font-weight: bold;
+    font-size: 3.125rem;
+    line-height: 100%;
+    text-align: center;
+
+    @include responsive($break-mobile) {
+      font-size: 4.5rem;
+    }
+  }
+
+  .sub-headline {
+    font-size: 1.5rem;
+    color: $secondary-font-color;
+    line-height: 120%;
+    text-transform: capitalize;
+    width: 350px;
+    justify-self: center;
+  }
+
+  .text-block {
+    //display: none;
+    width: 350px;
+    margin-top: 350px;
+  }
+}
+
+.devices {
+  position: absolute;
+  top: 400px;
+
+  @include responsive($break-tablet) {
+    top: 65px;
+    left: 300px;
+  }
+
+  .device-container {
+    position: relative;
+
+    #laptop {
+      width: 450px;
+      top: 100px;
+      position: absolute;
+
+      @include responsive($break-tablet) {
+        width: 530px;
+        top: 350px;
+        left: 0px;
+      }
+    }
+
+    #iphone {
+      position: absolute;
+      width: 250px;
+      transform: rotate(35.85deg);
+      top: 0px;
+      left: 100px;
+
+      @include responsive($break-tablet) {
+        width: 300px;
+        left: 120px;
+        top: 200px;
+      }
+    }
+
+    #ipad {
+      position: absolute;
+      left: 320px;
+      top: 180px;
+      transform: rotate(-1.5deg);
+      width: 300px;
+
+      @include responsive($break-tablet) {
+        width: 400px;
+        top: 430px;
+        left: 350px;
+      }
+    }
+  }
+}
+
+/* .hero-text {
+  width: 580px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  grid-template-rows: 1fr 1fr 30%;
+  justify-content: start;
+  text-align: center;
+  padding: 20px;
+
+  @include responsive(760px) {
+    width: 450px;
+    padding: 15px;
+  }
+  @include responsive($break-mobile-medium) {
+    width: 350px;
+    padding: 10px;
+  }
+
+  .headline {
+    color: $secondary-font-color;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 100%;
+
+    @include responsive(760px) {
+      font-size: 4rem;
+    }
+    @include responsive($break-mobile-medium) {
+      font-size: 3.5rem;
+    }
+  }
+  .sub-headline {
+    color: $secondary-font-color;
+    font-size: $headline-font-size;
+    line-height: 120%;
+    text-transform: capitalize;
+    width: 350px;
+    justify-self: center;
+
+    @include responsive(760px) {
+      font-size: 2rem;
+    }
+
+    @include responsive($break-mobile-medium) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.text-block {
+  justify-self: center;
+  width: 400px;
+  margin-top: 30px;
+  text-align: left;
+
+  @include responsive($break-mobile-medium) {
+    display: block;
+    width: 350px;
+    margin-top: 100px;
+  }
+}
+
+.text-header {
+  font-size: $headline-font-size;
+  //font-style: medium;
+  font-family: "Helvetica Neue";
+  text-align: center;
+
+  @include responsive($break-mobile-medium) {
+    font-size: 1.5rem;
+  }
+}
+
+
+.devices {
+  position: absolute;
+  top: 100px;
+  left: 520px;
+
+  @include responsive($break-mobile-medium) {
+    left: 100px;
+    top: 400px;
+    transform: scale(0.5);
+  }
+
+  .device-container {
+    position: relative;
+
+    #iphone {
+      position: absolute;
+      width: 480px;
+      transform: rotate(35.85deg);
+      top: 40px;
+      left: 200px;
+
+      @include responsive($break-mobile-medium) {
+        display: none;
+      }
+    }
+
+    #ipad {
+      position: absolute;
+      right: -1120px;
+      top: 480px;
+      transform: rotate(-1.5deg);
+      width: 570px;
+    }
+
+    #laptop {
+      position: absolute;
+      top: 300px;
+      width: 900px;
+      left: 0;
+    }
+  }
+}
+ */

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <title>Genuine Electronics</title>
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+    <link rel="stylesheet" href="./dist/css/swipe-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./dist/css/swipe.style.css" /> -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="brand" id="#logo">
+            <a href="#">
+              <img
+                src="./Assets/logos/Genuine-electronics logo.svg"
+                alt="Genuine-Electronics-Logo"
+              />
+            </a>
+          </div>
+
+          <ul class="links">
+            <li class="link-item current"><a href="#">Home</a></li>
+            <li class="link-item"><a href="#products">Products</a></li>
+            <li class="link-item"><a href="#why-us">Why Us</a></li>
+            <li class="link-item"><a href="#contact">Contact Us</a></li>
+          </ul>
+
+          <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-text">
+          <h1 class="headline">
+            Your
+            <span style="font-style: italic; color: #dc9f07">Ultimate</span>
+            Electronics Center
+          </h1>
+          <div class="sub-headline">
+            Get all genuine products at affordable prices
+          </div>
+          <div class="text-block">
+            <h4 class="text-header">All the Devices that you need</h4>
+            <div class="text">
+              Are you in need of a Laptop, Mobile Phone or a Tablet? Genuine
+              Electronics has got a variety of devices that you can choose from.
+            </div>
+          </div>
+        </div>
+
+        <div class="devices">
+          <div class="device-container">
+            <img
+              src="./assets/images/11_air-black_2.png"
+              alt="laptop"
+              id="laptop"
+            />
+            <img
+              src="./assets/images/iphone11pro-gold.png"
+              alt="iphone"
+              id="iphone"
+            />
+
+            <img src="./assets/images/ipad mockup.png" alt="ipad" id="ipad" />
+          </div>
+          <!-- <img src="./assets/images/Devices.png" alt="devices" /> -->
+        </div>
+      </div>
+    </div>
+    <button id="scrollToTop">
+      <svg
+        width="24"
+        height="13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2 11.5L12.744 2l9.756 9.5"
+          stroke="#01366c"
+          stroke-opacity=".8"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <script src="./dist/js/swipe-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./dist/js/swipe.js"></script>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("scrollToTop");
+      var hamburger = document.querySelector(".burger");
+      var navLink = document.querySelector(".main-nav");
+
+      hamburger.addEventListener("click", () => {
+        navLink.classList.toggle("show");
+      });
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      mybutton.addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // get the form elements defined in your form HTML above
+        var form = document.getElementById("contact-us-form");
+        var button = document.getElementById("form-submit");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          button.disabled = true;
+          status.innerHTML = "Thanks, Your Message has been forwarded!";
+          status.classList.add("status-success");
+
+          setTimeout(() => {
+            status.innerHTML = "";
+            status.classList.remove("status-success");
+          }, 3000);
+        }
+
+        function error() {
+          status.innerHTML = "Oops! There was a problem.";
+          status.classList("status-error");
+
+          setTimeout(() => {
+            status.innerHTML = "";
+            status.classList.remove("status-error");
+          }, 5000);
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+
+      // helper function for sending an AJAX request
+
+      function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.brand-section {
+  padding: 40px 0;
+  position: relative;
+
+  .viewport {
+    overflow: hidden;
+    @include responsive(760px) {
+      max-width: 760px;
+    }
+  }
+}
+.partner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  align-content: center;
+
+  .brand-item img {
+    max-width: 200px;
+    max-height: 100px;
+
+    @include responsive(800px) {
+      //width: fit-content;
+    }
+  }
+
+  @include responsive(760px) {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s ease-out;
+  }
+}
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  //transform: translateY(-10%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+#prev-btn,
+#next-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 10px;
+
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+#next-btn svg {
+  transform: rotate(90deg);
+}

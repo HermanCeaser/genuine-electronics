@@ -1,0 +1,240 @@
+$default-font-color: #000;
+$secondary-font-color: #fff;
+$primary-bg-color: #01366c;
+$secondary-bg-color: #dc9f07;
+$headline-font-size: 1.725rem; //30px
+$text-font-size: 1.25rem; //20px;
+
+@font-face {
+  font-family: "Helvetica Neue LT";
+  src: url("/assets/fonts/HelveticaNeue\ Light.ttf") format("truetype");
+  font-weight: 200px;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/assets/fonts/HelveticaNeue\ Medium.ttf") format("truetype");
+  font-weight: 500px;
+  font-style: medium;
+}
+// Mixin Styles and variables
+$break-tablet: 768px;
+$break-desktop: 968px;
+$break-mobile: 480px;
+
+@mixin responsive($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/* 
+    ==================================================
+        normalize css
+    ==================================================
+*/
+*,
+*:before,
+*:after,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  margin-top: 20px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+blockquote {
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  border-left: 5px solid #e2e2e2;
+  font-size: 18px;
+  line-height: 22px;
+}
+figure {
+  margin: 0;
+  margin-bottom: 10px;
+}
+figcaption {
+  margin-top: 5px;
+  text-align: center;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+/* ============================================
+     Normal Css
+   ============================================= 
+*/
+
+body {
+  font-family: Helvetica, "Helvetica Neue", "Helvetica Neue LT";
+  font-size: 16px;
+  background-color: white;
+  min-height: 100%;
+  line-height: 20px;
+  overflow-x: hidden !important;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+.container:after {
+  clear: both;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input:focus,
+input:hover {
+  border: 1px solid $secondary-bg-color;
+  transition: all 0.5s ease-in-out;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn {
+  color: $secondary-bg-color;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-color: #ffb700;
+  background-color: $secondary-bg-color;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+fieldset {
+  max-width: 500px;
+  padding: 16px;
+  border: 2px solid $secondary-bg-color;
+  border-radius: 8px;
+}
+legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  font-weight: bold;
+}
+
+label {
+  position: absolute;
+  left: -10000px;
+}
+
+.instagram,
+.facebook,
+.twitter {
+  cursor: pointer;
+}
+
+#scrollToTop {
+  background-color: $secondary-bg-color;
+  color: $primary-bg-color;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  height: 60px;
+  width: 60px;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 20px 40px 10px rgba(0, 0, 0, 0.25);
+}
