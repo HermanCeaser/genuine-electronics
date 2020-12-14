@@ -1,73 +1,66 @@
 .product {
-  //height: 400px;
   width: 100%;
   background: linear-gradient(
     180deg,
     rgba(1, 71, 140, 0) 0%,
     rgba(1, 71, 140, 0.3) 100%
   );
+  padding: 2rem 0.5rem;
 }
 
 .product-text {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 20% 1fr;
-  grid-gap: 20px;
+  padding: 10px;
+  margin-bottom: 2rem;
 
-  @include responsive(600px) {
-    grid-template-columns: 1fr;
+  @include responsive($break-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 20% 1fr;
+    justify-content: center;
+    margin-top: 2rem;
   }
 
   h3 {
-    font-size: 3.5rem;
-    justify-self: center;
-    @include responsive(600px) {
-      transform: translateY(-80px);
+    font-size: 3.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .divider {
+    display: none;
+    @include responsive($break-tablet) {
+      height: 2px;
+      width: 100px;
+      background: $secondary-bg-color;
+      display: block;
+      transform: rotate(90deg);
+      // margin-left: -10px;
+      margin-top: 2rem;
     }
   }
 
   .text {
-    @include responsive(600px) {
-      width: 500px;
-      text-align: center;
-      padding: 20px;
-      transform: translateY(-80px);
+    font-size: $text-font-size;
+    @include responsive($break-tablet) {
+      margin-left: -55px;
+      text-align: left;
+      width: 400px;
     }
-  }
-}
-
-.divider {
-  border: 1px solid rgba(220, 159, 7, 0.8);
-  transform: rotate(90deg);
-  width: 120px;
-  height: 0px;
-  align-self: center;
-  justify-self: center;
-
-  @include responsive(600px) {
-    display: none;
   }
 }
 
 .laptopset {
   width: 100%;
-  //height: 800px;
+  //height: 400px;
 }
 .swiper-slide-outer {
   display: block !important;
+  height: 300px;
 }
 .swiper-slide img {
   max-width: 100%;
 }
 
-.swiper-pagination {
-  bottom: 200px !important;
-}
 .swiper-container {
   width: 100%;
-  height: 800px;
   margin: 0 auto;
 }
 
@@ -86,5 +79,5 @@
 
 .swiper-button-next-products,
 .swiper-button-prev-products {
-  top: 10% !important;
+  top: 15% !important;
 }

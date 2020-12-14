@@ -5,9 +5,14 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  //height: 700px;
   color: #ffffff;
   padding: 20px 0 20px 0;
+
+  @include responsive($break-tablet) {
+    background-size: auto;
+    background-position: 0% 0%;
+    background-attachment: scroll;
+  }
 
   h4 {
     margin-top: 3.5rem;
@@ -23,14 +28,14 @@
 
 .reason-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   justify-content: space-between;
-  grid-gap: 60px;
+  grid-gap: 40px;
   text-align: center;
 
-  @include responsive(600px) {
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
+  @include responsive($break-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
 }
 

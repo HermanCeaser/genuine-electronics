@@ -8,14 +8,12 @@
   background-repeat: no-repeat;
   background-position: 60% 0%;
   background-size: auto;
-  padding: 100px 0 100px 0;
-  height: 950px;
+  padding: 100px 0 20px 0;
   position: relative;
   overflow: hidden;
   width: 100%;
 
   @include responsive($break-tablet) {
-    padding: 120px 0 100px 0;
     background-position: 70% -30%;
   }
 }
@@ -34,6 +32,14 @@
   @include responsive($break-tablet) {
     width: 500px;
     transform: scale(0.8);
+  }
+
+  @include responsive($break-desktop) {
+    transform: scale(1);
+    padding: 20px;
+    text-align: center;
+    width: 580px;
+    justify-content: start;
   }
   .headline {
     color: $secondary-font-color;
@@ -54,12 +60,38 @@
     text-transform: capitalize;
     width: 350px;
     justify-self: center;
+
+    @include responsive($break-tablet) {
+      font-size: 2rem;
+    }
   }
 
   .text-block {
     //display: none;
     width: 350px;
     margin-top: 350px;
+
+    @include responsive($break-tablet) {
+      transform: scale(1.2);
+      margin-top: 200px;
+      width: 400px;
+    }
+
+    @include responsive($break-desktop) {
+      transform: scale(1);
+      margin-top: 150px;
+      width: 450px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .text-header {
+      font-size: 1.5rem;
+
+      @include responsive($break-tablet) {
+        font-size: $headline-font-size;
+      }
+    }
   }
 }
 
@@ -70,6 +102,10 @@
   @include responsive($break-tablet) {
     top: 65px;
     left: 300px;
+  }
+  @include responsive($break-desktop) {
+    top: 100px;
+    left: 500px;
   }
 
   .device-container {
@@ -83,6 +119,11 @@
       @include responsive($break-tablet) {
         width: 530px;
         top: 350px;
+        left: 0px;
+      }
+      @include responsive($break-desktop) {
+        width: 800px;
+        top: 300px;
         left: 0px;
       }
     }
@@ -99,6 +140,12 @@
         left: 120px;
         top: 200px;
       }
+
+      @include responsive($break-desktop) {
+        width: 400px;
+        top: 80px;
+        left: 200px;
+      }
     }
 
     #ipad {
@@ -112,6 +159,12 @@
         width: 400px;
         top: 430px;
         left: 350px;
+      }
+
+      @include responsive($break-desktop) {
+        top: 450px;
+        left: 520px;
+        width: 500px;
       }
     }
   }
