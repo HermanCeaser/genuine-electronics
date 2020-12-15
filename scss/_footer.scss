@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $primary-bg-color;
-  background-position: attached;
+  background-position: 0% 0%;
   width: 100%;
   position: relative;
   padding: 50px;
@@ -12,23 +12,19 @@
     display: grid;
     grid-gap: 30px;
     justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 50px;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
     color: #fcfcfc;
 
-    @include responsive(600px) {
-      grid-template-columns: 1fr;
+    @include responsive($break-tablet) {
+      grid-template-columns: 1fr 1fr;
     }
   }
 
   .contact-form {
-    width: 430px;
+    width: 100%;
     justify-self: start;
-    @include responsive(600px) {
-      justify-self: center;
-      margin-bottom: 20px;
-      transform: scale(0.9);
-    }
+    margin-bottom: 40px;
   }
 
   .status-success {
@@ -54,10 +50,6 @@
     max-width: 430px;
     width: 100%;
     padding: 1rem 0;
-
-    @include responsive(600px) {
-      justify-self: center;
-    }
   }
 
   .location-content {
@@ -80,6 +72,7 @@
     position: absolute;
     bottom: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: $secondary-bg-color;
     //height: 40px;
@@ -89,8 +82,12 @@
     align-content: center;
     vertical-align: center;
 
+    @include responsive($break-tablet) {
+      flex-direction: row;
+    }
+
     p {
-      margin: 10px 0;
+      margin: 5px 0;
       font-family: consolas;
       font-size: 12px;
     }

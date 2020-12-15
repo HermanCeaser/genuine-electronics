@@ -6,9 +6,21 @@ var swiperProducts = new Swiper(".swiper-container-products", {
   spaceBetween: 50,
 });
 var swiperLaptops = new Swiper(".swiper-container-laptops", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 40,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+  },
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -22,13 +34,25 @@ var swiperLaptops = new Swiper(".swiper-container-laptops", {
 });
 
 var swiperPhones = new Swiper(".swiper-container-phones", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 40,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+  },
   loop: true,
   nested: true,
   autoplay: {
-    delay: 2500,
+    delay: 5000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -38,9 +62,21 @@ var swiperPhones = new Swiper(".swiper-container-phones", {
 });
 
 var swiperTablets = new Swiper(".swiper-container-tablets", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 40,
+    },
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+  },
   loop: true,
   nested: true,
   autoplay: {
@@ -49,6 +85,30 @@ var swiperTablets = new Swiper(".swiper-container-tablets", {
   },
   pagination: {
     el: ".swiper-pagination-tablets",
+    clickable: true,
+  },
+});
+
+var swiperBrand = new Swiper(".swiper-container-brand", {
+  slidesPerView: 2,
+  spaceBetween: 5,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
     clickable: true,
   },
 });

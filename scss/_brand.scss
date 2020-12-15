@@ -1,62 +1,33 @@
 .brand-section {
-  padding: 40px 0;
+  padding: 10px 10px;
   position: relative;
 
   .viewport {
     overflow: hidden;
-    @include responsive(760px) {
-      max-width: 760px;
+
+    h4 {
+      font-size: 1.5rem;
+      text-transform: capitalize;
     }
   }
 }
 .partner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   justify-content: center;
   align-items: center;
-  grid-template-rows: auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
-  align-content: center;
+}
 
-  .brand-item img {
-    max-width: 200px;
+.brand-item {
+  width: 150px;
+  //height: 150px;
+  img {
+    max-width: 100%;
     max-height: 100px;
-
-    @include responsive(800px) {
-      //width: fit-content;
-    }
-  }
-
-  @include responsive(760px) {
-    display: flex;
-    flex-direction: row;
-    transition: 0.5s ease-out;
   }
 }
-.slide-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  //transform: translateY(-10%);
+
+.swiper-container-brand {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  display: none;
-}
-
-#prev-btn,
-#next-btn {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 10px;
-
-  svg {
-    transform: rotate(-90deg);
-  }
-}
-
-#next-btn svg {
-  transform: rotate(90deg);
+  height: 100px;
+  margin: 20px 10px;
 }
