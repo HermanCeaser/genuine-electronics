@@ -65,6 +65,10 @@
     p {
       align-self: center;
       vertical-align: center;
+
+      a {
+        color: $secondary-bg-color;
+      }
     }
   }
 
