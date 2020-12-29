@@ -64,17 +64,34 @@
         <div class="devices">
           <div class="device-container">
             <img
-              src="./assets/images/11_air-black_2.png"
+              srcset="
+                ./assets/images/macbook_w_450.png 450w,
+                ./assets/images/macbook_w_540.png 540w,
+                ./assets/images/macbook_w_800.png 800w
+              "
               alt="laptop"
               id="laptop"
             />
+
             <img
-              src="./assets/images/iphone11pro-gold.png"
+              srcset="
+                ./assets/images/iphone11-1x.webp 480w,
+                ./assets/images/iphone11-2x.png  760w,
+                ./assets/images/iphone11-3x.png  960w
+              "
               alt="iphone"
               id="iphone"
             />
 
-            <img src="./assets/images/ipad mockup.png" alt="ipad" id="ipad" />
+            <img
+              srcset="
+                ./assets/images/ipad_w_300.png 450w,
+                ./assets/images/ipad_w_400.png 760w,
+                ./assets/images/ipad_w_450.png 960w
+              "
+              alt="ipad"
+              id="ipad"
+            />
           </div>
           <!-- <img src="./assets/images/Devices.png" alt="devices" /> -->
         </div>
@@ -110,12 +127,12 @@
                           </div>
                           <div class="swiper-slide">
                             <img
-                              src="./assets/images/macbook air.webp"
+                              src="./assets/images/macbook-air.webp"
                               alt=""
                             />
                           </div>
                           <div class="swiper-slide">
-                            <img src="./assets/images/hp-envy-1.png" alt="" />
+                            <img src="./assets/images/hp-envy1.webp" alt="" />
                           </div>
                           <div class="swiper-slide">
                             <img src="./assets/images/hp-envy.png" alt="" />
@@ -145,21 +162,31 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img
-                              src="./assets/images/Samsung_Galaxy_S10.webp"
+                              data-src="./assets/images/Samsung_Galaxy_S10.webp"
                               alt=""
+                              class="lazyload"
                             />
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="./assets/images/itel s15.png" alt="" />
                           </div>
                           <div class="swiper-slide">
                             <img
-                              src="./assets/images/Techno-Spark-5-2.png"
+                              data-src="./assets/images/itel-s15.webp"
                               alt=""
+                              class="lazyload"
                             />
                           </div>
                           <div class="swiper-slide">
-                            <img src="./assets/images/huawe p20.png" alt="" />
+                            <img
+                              data-src="./assets/images/tecno-spark.webp"
+                              alt=""
+                              class="lazyload"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              data-src="./assets/images/huawei-p20.webp"
+                              alt=""
+                              class="lazyload"
+                            />
                           </div>
                         </div>
                         <!-- Add Pagination -->
@@ -182,21 +209,31 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img
-                              src="./assets/images/tablet winnovo.png"
+                              data-src="./assets/images/tablet-tactile.webp"
                               alt=""
+                              class="lazyload"
                             />
                           </div>
                           <div class="swiper-slide">
                             <img
-                              src="./assets/images/tablette-tactile-10.jpg"
+                              data-src="./assets/images/tablet-winnovo.webp"
                               alt=""
+                              class="lazyload"
                             />
                           </div>
                           <div class="swiper-slide">
-                            <img src="./assets/images/galaxy tab.webp" alt="" />
+                            <img
+                              data-src="./assets/images/galaxy tab.webp"
+                              alt=""
+                              class="lazyload"
+                            />
                           </div>
                           <div class="swiper-slide">
-                            <img src="./assets/images/ipad mockup.png" alt="" />
+                            <img
+                              data-src="./assets/images/ipad_w_400.png"
+                              alt=""
+                              class="lazyload"
+                            />
                           </div>
                         </div>
                         <!-- Add Pagination -->
@@ -375,8 +412,9 @@
               <div class="swiper-slide">
                 <div class="brand-item">
                   <img
-                    src="./assets/logos/genuine-electronics_logos_acer_gqptjl-c_scale,w_150 webp.webp"
+                    data-src="./assets/logos/genuine-electronics_logos_acer_gqptjl-c_scale,w_150 webp.webp"
                     alt="Acer"
+                    class="lazyload"
                   />
                 </div>
               </div>
@@ -660,45 +698,12 @@
         />
       </svg>
     </button>
-    <script src="./dist/js/swipe-bundle.min.js"></script>
+    <script defer src="./dist/js/swipe-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script src="./dist/js/swipe.js"></script>
-    <script>
-      //Get the button
-      var mybutton = document.getElementById("scrollToTop");
-      var hamburger = document.querySelector(".burger");
-      var navLink = document.querySelector(".main-nav");
-
-      hamburger.addEventListener("click", () => {
-        navLink.classList.toggle("show");
-      });
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      mybutton.addEventListener("click", () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      });
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
+    <script defer src="./dist/js/swipe.js"></script>
+    <script src="./dist/js/index.js" defer></script>
+    <script src="./dist/js/lazysizes.min.js" async></script>
 
     <script>
       window.addEventListener("DOMContentLoaded", function () {
